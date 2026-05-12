@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "nombre": "iPhone 15",
+    "marca": "Apple",
+    "precio": 4500,
+    "categoria": "Celular"
+  },
+  {
+    "id": 2,
+    "nombre": "Galaxy S24",
+    "marca": "Samsung",
+    "precio": 3900,
+    "categoria": "Celular"
+  },
+  {
+    "id": 3,
+    "nombre": "AirPods Pro",
+    "marca": "Apple",
+    "precio": 1200,
+    "categoria": "Accesorio"
+  }
+  ,
+  {
+    "id": 4,
+    "nombre": "Xiaomi Mi Band 7",
+    "marca": "Xiaomi",
+    "precio": 500,
+    "categoria": "Accesorio"
+  }
+  ,
+  {
+    "id": 5,
+    "nombre": "MacBook Pro",
+    "marca": "Apple",
+    "precio": 15000,
+    "categoria": "Computadora"
+  }
+  ,
+  {
+    "id": 6,
+    "nombre": "Dell XPS 13",
+    "marca": "Dell",
+    "precio": 12000,
+    "categoria": "Computadora"
+  }
+]
