@@ -1,4 +1,7 @@
-const fs = require("fs");
+const {
+  readProducts,
+  saveProducts
+} = require("../models/products.model");
 
 /*
 =====================================
@@ -8,15 +11,13 @@ OBTENER TODOS LOS PRODUCTOS
 
 const getProducts = (req, res) => {
 
-  fs.readFile("./products.json", "utf8", (err, data) => {
+  readProducts((err, products) => {
 
     if (err) {
       return res.status(500).json({
         error: "Error leyendo productos"
       });
     }
-
-    const products = JSON.parse(data);
 
     res.json(products);
 
@@ -32,15 +33,13 @@ OBTENER PRODUCTO POR ID
 
 const getProductById = (req, res) => {
 
-  fs.readFile("./products.json", "utf8", (err, data) => {
+  readProducts((err, products) => {
 
     if (err) {
       return res.status(500).json({
         error: "Error leyendo productos"
       });
     }
-
-    const products = JSON.parse(data);
 
     const product = products.find(
       p => p.id === parseInt(req.params.id)
@@ -60,13 +59,13 @@ const getProductById = (req, res) => {
 
 /*
 =====================================
-ACTUALIZAR PRODUCTO
+CREAR PRODUCTO
 =====================================
 */
 
-const updateProduct = (req, res) => {
+const createProduct = (req, res) => {
 
-  fs.readFile("./products.json", "utf8", (err, data) => {
+  readProducts((err, products) => {
 
     if (err) {
       return res.status(500).json({
@@ -74,7 +73,50 @@ const updateProduct = (req, res) => {
       });
     }
 
-    let products = JSON.parse(data);
+    const newProduct = {
+      id: products.length + 1,
+      nombre: req.body.nombre,
+      marca: req.body.marca,
+      precio: req.body.precio,
+      categoria: req.body.categoria
+    };
+
+    products.push(newProduct);
+
+    saveProducts(products, (err) => {
+
+      if (err) {
+        return res.status(500).json({
+          error: "Error guardando producto"
+        });
+      }
+
+      res.status(201).json({
+        mensaje: "Producto creado",
+        producto: newProduct
+      });
+
+    });
+
+  });
+
+};
+
+/*
+=====================================
+ACTUALIZAR PRODUCTO
+=====================================
+*/
+
+const updateProduct = (req, res) => {
+
+  readProducts((err, products) => {
+
+    if (err) {
+      return res.status(500).json({
+        error: "Error leyendo productos"
+      });
+    }
 
     const index = products.findIndex(
       p => p.id === parseInt(req.params.id)
@@ -91,24 +133,20 @@ const updateProduct = (req, res) => {
       ...req.body
     };
 
-    fs.writeFile(
-      "./products.json",
-      JSON.stringify(products, null, 2),
-      (err) => {
+    saveProducts(products, (err) => {
 
-        if (err) {
-          return res.status(500).json({
-            error: "Error actualizando producto"
-          });
-        }
-
-        res.json({
-          mensaje: "Producto actualizado",
-          producto: products[index]
+      if (err) {
+        return res.status(500).json({
+          error: "Error actualizando producto"
         });
-
       }
-    );
+
+      res.json({
+        mensaje: "Producto actualizado",
+        producto: products[index]
+      });
+
+    });
 
   });
 
@@ -122,7 +160,7 @@ ELIMINAR PRODUCTO
 
 const deleteProduct = (req, res) => {
 
-  fs.readFile("./products.json", "utf8", (err, data) => {
+  readProducts((err, products) => {
 
     if (err) {
       return res.status(500).json({
@@ -130,29 +168,23 @@ const deleteProduct = (req, res) => {
       });
     }
 
-    let products = JSON.parse(data);
-
     const filteredProducts = products.filter(
       p => p.id !== parseInt(req.params.id)
     );
 
-    fs.writeFile(
-      "./products.json",
-      JSON.stringify(filteredProducts, null, 2),
-      (err) => {
+    saveProducts(filteredProducts, (err) => {
 
-        if (err) {
-          return res.status(500).json({
-            error: "Error eliminando producto"
-          });
-        }
-
-        res.json({
-          mensaje: "Producto eliminado"
+      if (err) {
+        return res.status(500).json({
+          error: "Error eliminando producto"
         });
-
       }
-    );
+
+      res.json({
+        mensaje: "Producto eliminado"
+      });
+
+    });
 
   });
 
@@ -161,6 +193,7 @@ const deleteProduct = (req, res) => {
 module.exports = {
   getProducts,
   getProductById,
+  createProduct,
   updateProduct,
   deleteProduct
 };
