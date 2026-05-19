@@ -20,7 +20,7 @@
     "nombre": "AirPods Pro",
     "marca": "Apple",
     "precio": 120000,
-    "categoria": "Accesorio",
+    "categoria": "Audifonos",
     "imagen": "https://www.apple.com/newsroom/images/2025/09/introducing-airpods-pro-3-the-ultimate-audio-experience/article/Apple-AirPods-Pro-3-hero-250909_inline.jpg.large_2x.jpg"
   }
   ,
@@ -29,7 +29,7 @@
     "nombre": "Xiaomi Mi Band 7",
     "marca": "Xiaomi",
     "precio": 50000,
-    "categoria": "Accesorio",
+    "categoria": "band",
     "imagen":"https://img.gkbcdn.com/s3/p/2022-05-25/xiaomi-mi-band-6-smart-bracelet-1-56-inch-screen-black-237984-1653467777344.jpg"
   }
   ,
