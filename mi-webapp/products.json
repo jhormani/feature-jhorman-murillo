@@ -4,24 +4,24 @@
     "nombre": "iPhone 15",
     "marca": "Apple",
     "precio": 4500,
-    "categoria": "Celular"
-    "imagen": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-7inch-black?wid=2560&hei=1440&fmt=jpeg&qlt=95&.v=1692923781972",
+    "categoria": "Celular",
+    "imagen": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-7inch-black?wid=2560&hei=1440&fmt=jpeg&qlt=95&.v=1692923781972"
   },
   {
     "id": 2,
     "nombre": "Galaxy S24",
     "marca": "Samsung",
     "precio": 3900,
-    "categoria": "Celular"
-    "imagen" :"https://image-us.samsung.com/us/smartphones/galaxy-s24/all-gallery/01_E1_OynxBlack_Lockup_1600x1200.jpg?$product-details-jpg$?$product-details-thumbnail-jpg$",
+    "categoria": "Celular",
+    "imagen" :"https://image-us.samsung.com/us/smartphones/galaxy-s24/all-gallery/01_E1_OynxBlack_Lockup_1600x1200.jpg?$product-details-jpg$?$product-details-thumbnail-jpg$"
   },
   {
     "id": 3,
     "nombre": "AirPods Pro",
     "marca": "Apple",
     "precio": 1200,
-    "categoria": "Accesorio"
-    "imagen": "https://www.apple.com/newsroom/images/2025/09/introducing-airpods-pro-3-the-ultimate-audio-experience/article/Apple-AirPods-Pro-3-hero-250909_inline.jpg.large_2x.jpg",
+    "categoria": "Accesorio",
+    "imagen": "https://www.apple.com/newsroom/images/2025/09/introducing-airpods-pro-3-the-ultimate-audio-experience/article/Apple-AirPods-Pro-3-hero-250909_inline.jpg.large_2x.jpg"
   }
   ,
   {
@@ -29,8 +29,8 @@
     "nombre": "Xiaomi Mi Band 7",
     "marca": "Xiaomi",
     "precio": 500,
-    "categoria": "Accesorio"
-    "imagen":"https://img.gkbcdn.com/s3/p/2022-05-25/xiaomi-mi-band-6-smart-bracelet-1-56-inch-screen-black-237984-1653467777344.jpg",
+    "categoria": "Accesorio",
+    "imagen":"https://img.gkbcdn.com/s3/p/2022-05-25/xiaomi-mi-band-6-smart-bracelet-1-56-inch-screen-black-237984-1653467777344.jpg"
   }
   ,
   {
@@ -38,8 +38,8 @@
     "nombre": "MacBook Pro",
     "marca": "Apple",
     "precio": 15000,
-    "categoria": "Computadora"
-    "imagen":"https://www.renderhub.com/amirhs09/apple-macbook-pro-14-collection-2022-with-magic-mouse/apple-macbook-pro-14-collection-2022-with-magic-mouse-07.jpg",
+    "categoria": "Computadora",
+    "imagen":"https://www.renderhub.com/amirhs09/apple-macbook-pro-14-collection-2022-with-magic-mouse/apple-macbook-pro-14-collection-2022-with-magic-mouse-07.jpg"
   }
   ,
   {
@@ -47,7 +47,7 @@
     "nombre": "Dell XPS 13",
     "marca": "Dell",
     "precio": 12000,
-    "categoria": "Computadora"
-    "imagen":"https://laptopmedia.com/wp-content/uploads/2024/04/3-7-scaled-e1712907644515.jpg",
+    "categoria": "Computadora",
+    "imagen":"https://laptopmedia.com/wp-content/uploads/2024/04/3-7-scaled-e1712907644515.jpg"
   }
 ]
