@@ -1,27 +1,32 @@
 const express = require("express");
-const cors = require("cors"); // Agregado para que React se pueda conectar sin bloqueos
+const cors = require("cors");
 
 const app = express();
 const PORT = 3000;
 
 // Middlewares
-app.use(cors()); // Agregado
+app.use(cors());
 app.use(express.json());
-app.use('/imagenes', express.static('public')); // Agregado para servir las fotos de tus productos
+
+app.use(express.static("public")); // ← AGREGA ESTA LÍNEA
+
+app.use('/imagenes', express.static('public'));
 
 /*
 =====================================
 IMPORTAR RUTAS
 =====================================
 */
+
 const productsRoutes = require("./routes/products.routes");
-const cartRoutes = require("./routes/cart.routes"); // Agregado
+const cartRoutes = require("./routes/cart.routes");
 
 /*
 =====================================
 RUTA PRINCIPAL
 =====================================
 */
+
 app.get("/", (req, res) => {
   res.json({
     mensaje: "API REST TechStore funcionando"
@@ -33,8 +38,9 @@ app.get("/", (req, res) => {
 USAR RUTAS
 =====================================
 */
+
 app.use("/products", productsRoutes);
-app.use("/cart", cartRoutes); // Agregado
+app.use("/cart", cartRoutes);
 
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
