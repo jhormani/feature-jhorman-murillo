@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Pago PSE</title>
+  <title>PSE Payments</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -21,15 +21,19 @@
     <form id="payment-form">
 
       <label>Nombre completo</label>
-      <input type="text" required>
 
-      <label>Banco</label>
+      <input type="text" placeholder="Ingresa tu nombre" required>
+
+      <label>Selecciona tu banco</label>
 
       <select required>
+
         <option>Bancolombia</option>
         <option>Nequi</option>
         <option>Davivienda</option>
         <option>BBVA</option>
+        <option>Banco de Bogotá</option>
+
       </select>
 
       <button type="submit">
@@ -37,6 +41,14 @@
       </button>
 
     </form>
+
+    <div id="loading">
+
+      <div class="spinner"></div>
+
+      <p>Procesando pago...</p>
+
+    </div>
 
     <div id="message"></div>
 

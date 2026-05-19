@@ -173,3 +173,45 @@ PAGO PSE
 
   text-align: center;
 }
+
+/*
+=====================================
+LOADING PSE
+=====================================
+*/
+
+#loading {
+
+  text-align: center;
+
+  margin-top: 20px;
+}
+
+.spinner {
+
+  width: 60px;
+
+  height: 60px;
+
+  border: 6px solid #ccc;
+
+  border-top: 6px solid #111;
+
+  border-radius: 50%;
+
+  margin: auto;
+
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+
+}
