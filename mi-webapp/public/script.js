@@ -28,7 +28,11 @@ fetch("/products")
 
             <p class="category">${product.categoria}</p>
 
-            <button>Comprar</button>
+            <button onclick="
+              window.location.href='payment.html?name=${product.nombre}&price=${product.precio}'
+            ">
+              Comprar
+            </button>
 
           </div>
 

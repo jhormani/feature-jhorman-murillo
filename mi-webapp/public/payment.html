@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pago PSE</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="payment-container">
+
+    <h1>💳 Pago PSE</h1>
+
+    <div id="product-info"></div>
+
+    <form id="payment-form">
+
+      <label>Nombre completo</label>
+      <input type="text" required>
+
+      <label>Banco</label>
+
+      <select required>
+        <option>Bancolombia</option>
+        <option>Nequi</option>
+        <option>Davivienda</option>
+        <option>BBVA</option>
+      </select>
+
+      <button type="submit">
+        Pagar con PSE
+      </button>
+
+    </form>
+
+    <div id="message"></div>
+
+  </div>
+
+  <script src="payment.js"></script>
+
+</body>
+
+</html>
